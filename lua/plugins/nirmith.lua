@@ -24,6 +24,9 @@ return {
       opts.mappings.n["H"] = { "<cmd>bprevious<CR>", desc = "Previous buffer" }
       opts.mappings.n["L"] = { "<cmd>bnext<CR>", desc = "Next buffer" }
 
+      opts.mappings.i["<C-h>"] = { "<Left>",  desc = "Move cursor left" }
+      opts.mappings.i["<C-l>"] = { "<Right>",  desc = "Move cursor right" }
+
       opts.options = opts.options or {}
       opts.options.opt = vim.tbl_deep_extend("force", opts.options.opt or {}, {
         wrap = true, -- enable wrapping
