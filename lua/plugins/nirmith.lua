@@ -18,6 +18,9 @@ return {
         desc = "Zen Mode",
       }
 
+      opts.mappings.n["<CR>"]   = { "o<Esc>", desc = "Add blank line below (normal mode)" }
+      opts.mappings.n["<S-CR>"]   = { "O<Esc>", desc = "Add blank line above (normal mode)" }
+
       opts.mappings.n["H"] = { "<cmd>bprevious<CR>", desc = "Previous buffer" }
       opts.mappings.n["L"] = { "<cmd>bnext<CR>", desc = "Next buffer" }
 
