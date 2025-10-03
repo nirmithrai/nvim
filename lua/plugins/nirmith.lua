@@ -21,8 +21,8 @@ return {
       opts.mappings.n["<CR>"]   = { "o<Esc>", desc = "Add blank line below (normal mode)" }
       opts.mappings.n["<S-CR>"]   = { "O<Esc>", desc = "Add blank line above (normal mode)" }
 
-      opts.mappings.n["H"] = { "<cmd>bprevious<CR>", desc = "Previous buffer" }
-      opts.mappings.n["L"] = { "<cmd>bnext<CR>", desc = "Next buffer" }
+	opts.mappings.n["H"] = { "[b", desc = "Previous buffer", remap = true, silent = true }
+	opts.mappings.n["L"] = { "]b", desc = "Next buffer",     remap = true, silent = true }
 
       opts.mappings.i["<C-h>"] = { "<Left>",  desc = "Move cursor left" }
       opts.mappings.i["<C-l>"] = { "<Right>",  desc = "Move cursor right" }
