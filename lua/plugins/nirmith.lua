@@ -18,14 +18,14 @@ return {
         desc = "Zen Mode",
       }
 
-      opts.mappings.n["<CR>"]   = { "o<Esc>", desc = "Add blank line below (normal mode)" }
-      opts.mappings.n["<S-CR>"]   = { "O<Esc>", desc = "Add blank line above (normal mode)" }
+      opts.mappings.n["<CR>"] = { "o<Esc>", desc = "Add blank line below (normal mode)" }
+      opts.mappings.n["<S-CR>"] = { "O<Esc>", desc = "Add blank line above (normal mode)" }
 
       opts.mappings.n["H"] = { "<cmd>bprevious<CR>", desc = "Previous buffer" }
       opts.mappings.n["L"] = { "<cmd>bnext<CR>", desc = "Next buffer" }
 
-      opts.mappings.i["<C-h>"] = { "<Left>",  desc = "Move cursor left" }
-      opts.mappings.i["<C-l>"] = { "<Right>",  desc = "Move cursor right" }
+      opts.mappings.i["<C-h>"] = { "<Left>", desc = "Move cursor left" }
+      opts.mappings.i["<C-l>"] = { "<Right>", desc = "Move cursor right" }
 
       opts.options = opts.options or {}
       opts.options.opt = vim.tbl_deep_extend("force", opts.options.opt or {}, {
@@ -64,6 +64,15 @@ return {
         WinSeparator = { bg = "NONE" },
         ZenBg = { bg = "NONE" },
         ZenBgNC = { bg = "NONE" },
+        NeoTreeNormal = { bg = "NONE" },
+        NeoTreeNormalNC = { bg = "NONE" },
+        NeoTreeEndOfBuffer = { bg = "NONE" },
+        NeoTreeSignColumn = { bg = "NONE" },
+        NeoTreeWinSeparator = { bg = "NONE" },
+        NeoTreeTabActive = { bg = "NONE" },
+        NeoTreeTabInactive = { bg = "NONE" },
+        NeoTreeTabSeparatorActive = { bg = "NONE" },
+        NeoTreeTabSeparatorInactive = { bg = "NONE" },
       })
       return opts
     end,
