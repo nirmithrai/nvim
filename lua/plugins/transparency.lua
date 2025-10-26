@@ -16,9 +16,9 @@ return {
         local groups = {
           "Normal",
           "NormalNC",
-          "NormalFloat",
+          -- "NormalFloat",
           "SignColumn",
-          "FloatBorder",
+          -- "FloatBorder",
           "WinSeparator",
           "ZenBg",
           "ZenBgNC",
