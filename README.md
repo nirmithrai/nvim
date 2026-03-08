@@ -1,43 +1,41 @@
-# Lazyvim
+# kickstart.nvim
+### Install Recipes
+#### Linux Install
+<details><summary>Ubuntu Install Steps</summary>
 
-
-## 🛠️ Installation
-
-#### Make a backup of your current nvim and shared folder
-
-```shell
-mv ~/.config/nvim ~/.config/nvim.bak
-mv ~/.local/share/nvim ~/.local/share/nvim.bak
-mv ~/.local/state/nvim ~/.local/state/nvim.bak
-mv ~/.cache/nvim ~/.cache/nvim.bak
 ```
-
-#### Clone the repository
-
-```shell
-git clone https://github.com/nirmithrai/nvim ~/.config/nvim
+sudo add-apt-repository ppa:neovim-ppa/unstable -y
+sudo apt update
+sudo apt install make gcc ripgrep fd-find tree-sitter-cli unzip git xclip neovim
 ```
+</details>
+<details><summary>Debian Install Steps</summary>
 
-#### Start Neovim
-
-```shell
-nvim
 ```
+sudo apt update
+sudo apt install make gcc ripgrep fd-find tree-sitter-cli unzip git xclip curl
 
-# prerequisites
-Neovim >= 0.11.2 (needs to be built with LuaJIT)
-Git >= 2.19.0 (for partial clones support)
-a Nerd Font(v3.0 or greater) (optional, but needed to display some icons)
-lazygit (optional)
-tree-sitter-cli and a C compiler for nvim-treesitter. See here
-curl for blink.cmp (completion engine)
-for fzf-lua (optional)
-    fzf: fzf (v0.25.1 or greater)
-    live grep: ripgrep
-    find files: fd
-a terminal that support true color and undercurl:
-    kitty (Linux & Macos)
-    wezterm (Linux, Macos & Windows)
-    alacritty (Linux, Macos & Windows)
-    iterm2 (Macos)
-    ghostty (Linux, Macos & Windows)
+# Now we install nvim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim-linux-x86_64
+sudo mkdir -p /opt/nvim-linux-x86_64
+sudo chmod a+rX /opt/nvim-linux-x86_64
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+
+# make it available in /usr/local/bin, distro installs to /usr/bin
+sudo ln -sf /opt/nvim-linux-x86_64/bin/nvim /usr/local/bin/
+```
+</details>
+<details><summary>Fedora Install Steps</summary>
+
+```
+sudo dnf install -y gcc make git ripgrep fd-find tree-sitter-cli unzip neovim
+```
+</details>
+
+<details><summary>Arch Install Steps</summary>
+
+```
+sudo pacman -S --noconfirm --needed gcc make git ripgrep fd tree-sitter-cli unzip neovim
+```
+</details>
