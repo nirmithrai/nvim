@@ -1,6 +1,13 @@
-# kickstart.nvim
-### Install Recipes
-#### Linux Install
+# Quickstart
+
+## Kitty
+```
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+```
+
+## NVIM kickstart
+
+### Linux Install
 <details><summary>Ubuntu Install Steps</summary>
 
 ```
@@ -39,3 +46,35 @@ sudo dnf install -y gcc make git ripgrep fd-find tree-sitter-cli unzip neovim
 sudo pacman -S --noconfirm --needed gcc make git ripgrep fd tree-sitter-cli unzip neovim
 ```
 </details>
+
+
+## tmux
+### install tmux
+
+#### Arch Linux 	
+```
+sudo pacman -S tmux
+```
+
+#### Debian or Ubuntu 	
+```
+sudo apt install tmux
+```
+
+
+#### Fedora 	
+```
+sudo dnf install tmux
+```
+
+### install tpm
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+
+### after copying the config
+```
+tmux source ~/.tmux.conf
+```
+Add new plugin to ~/.tmux.conf with set -g @plugin '...'
+Press prefix + I (capital i, as in Install) to fetch the plugin.
